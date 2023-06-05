@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="10dp"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:id="@+id/linearLayoutContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:alpha="0.8"
+    tools:background="@android:color/holo_green_light">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewAuthor"
+        tools:text="Вася Пупкин"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewReview"
+        tools:text="Норм кинцо и конкусы интересные"
+        android:textColor="@color/white"
+
+        />
+    
+</LinearLayout>
+    
+
+</androidx.cardview.widget.CardView>

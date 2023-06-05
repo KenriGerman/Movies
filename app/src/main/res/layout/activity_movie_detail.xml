@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieDetailActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewPoster"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewTitle"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewPoster"
+            tools:text="Title"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewYear"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+            tools:text="1999"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="16sp"
+            android:padding="8dp"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewDescription"
+            app:layout_constraintTop_toBottomOf="@+id/textViewYear"
+            tools:text="Description"
+            android:textSize="16sp"
+            android:padding="8dp"
+
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcTrailers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/textViewDescription"
+            tools:listitem="@layout/trailers_ellements" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerViewReviews"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/rcTrailers"
+            tools:listitem="@layout/review_item"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewReviews" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
